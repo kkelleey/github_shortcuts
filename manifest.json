@@ -25,7 +25,9 @@
         "https://github.com/*"
       ],
       "js": [
-        "src/inject/inject.js"
+        "src/inject/inject.js",
+        "js/jquery/jquery.js",
+        "js/jquery/jquery.hotkeys.js"
       ]
     }
   ]
