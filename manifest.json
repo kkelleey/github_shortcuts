@@ -26,7 +26,8 @@
       ],
       "js": [
         "src/inject/inject.js",
-        "js/jquery/jquery.js"
+        "js/jquery/jquery.js",
+        "js/jquery/jquery.hotkeys.js"
       ]
     }
   ]

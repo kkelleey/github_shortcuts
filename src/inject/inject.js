@@ -1,18 +1,25 @@
 chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
-	if (document.readyState === "complete") {
-		clearInterval(readyStateCheckInterval);
+  	if (document.readyState === "complete") {
+  		clearInterval(readyStateCheckInterval);
 
-	 $prButton = $('.recently-pushed-branch-actions a');
-   if ($prButton.length > 0) {
-    console.log($prButton);
-    $prButton.click();
-   } else {
-    console.log('No button');
-   }
+      $(document).on('keydown', null, 'p', function() {
+        console.log("You pressed p");
+        $prButton = $('.recently-pushed-branch-actions a')[0];
+        if ($prButton) {
+          $prButton.click();
+        }
+      });
 
-   // TEST  
+      $(document).on('keydown', null, 'b', function() {
+        console.log("You pressed b");
+        $baseBranch = $('.range-editor span[aria-label="Choose a base branch"]')[0];
+        if ($baseBranch) {
+          $baseBranch.click();
+          $('input[id^="commitish-filter"]').val('develop');
+        }
+      })
 
-	}
+  	}
 	}, 10);
 });
