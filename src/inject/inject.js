@@ -8,6 +8,8 @@ chrome.extension.sendMessage({}, function(response) {
     $prButton.click();
    }
 
+   // TEST  
+
 	}
 	}, 10);
 });
